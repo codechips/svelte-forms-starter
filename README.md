@@ -2,7 +2,7 @@
 
 > :green_book: A starter project for my book - [**Svelte Forms: From WTF to FTW!**](https://gumroad.com/l/svelte-forms)
 
-[Svelte Forms Book](svelte-forms.png)
+![Svelte Forms Book](svelte-forms.png)
 
 ## How to Run
 
