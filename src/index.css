@@ -1,0 +1,113 @@
+@tailwind base;
+
+@layer base {
+  body {
+    @apply mx-auto max-w-5xl;
+  }
+
+  a:hover {
+    filter: brightness(1.5);
+  }
+  body {
+    @apply bg-gray-50;
+  }
+  h2 {
+    @apply text-2xl text-gray-600;
+  }
+  h3 {
+    @apply font-medium text-lg mt-4;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  .error {
+    @apply text-red-500;
+  }
+  .generic {
+    & form > div {
+      @apply mt-4;
+    }
+
+    & form div:last-of-type {
+      @apply space-x-1;
+    }
+
+    & label span,
+    & .field-label,
+    & h4 {
+      @apply block font-semibold text-xs tracking-wide uppercase mt-2 mb-1;
+    }
+
+    & textarea {
+      @apply border w-full p-2 h-32;
+    }
+
+    & input[type='text'],
+    & input[type='email'],
+    & input[type='number'],
+    & input[type='date'],
+    & input[type='password'],
+    & select {
+      @apply w-full bg-white p-2 border border-gray-300 focus:outline-none focus:ring-1 focus:border-blue-300;
+    }
+    & select {
+      @apply appearance-none;
+    }
+    & input[type='range'] {
+      @apply w-full;
+    }
+
+    & input[type='text'].invalid,
+    & input[type='email'].invalid,
+    & input[type='password'].invalid {
+      @apply border border-red-500 ring-red-500;
+    }
+
+    & button[type='submit'] {
+      @apply bg-gray-700 text-gray-50 hover:bg-gray-800 py-1 px-4 rounded-sm font-semibold;
+    }
+    & button[type='submit']:disabled {
+      @apply bg-gray-400 text-gray-50 border border-gray-400;
+    }
+    & button {
+      @apply border border-gray-500 text-gray-700 py-1 px-4 hover:bg-gray-700 hover:text-gray-50 rounded-sm;
+    }
+
+    & button.add {
+      @apply mt-2 bg-gray-700 text-sm font-semibold text-gray-50 px-4 py-1 hover:text-green-300;
+    }
+
+    & ul {
+      @apply space-y-2;
+      & li {
+        @apply flex;
+      }
+      & button {
+        @apply ml-2 bg-gray-700 text-white hover:text-red-500 hover:bg-gray-800;
+      }
+    }
+  }
+
+  .inline {
+    @apply space-y-2;
+
+    & div {
+      @apply flex;
+    }
+
+    & div:last-of-type {
+      @apply pt-2;
+    }
+
+    & label {
+      @apply font-medium text-sm tracking-wide mr-4 cursor-pointer inline-flex items-center;
+      & input[type='radio'],
+      & input[type='checkbox'] {
+        @apply mr-1;
+      }
+    }
+  }
+}
+@tailwind utilities;
