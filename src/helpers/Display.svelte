@@ -1,16 +1,16 @@
 <script>
-  import { fade } from 'svelte/transition';
+  import { fade } from 'svelte/transition'
 
-  export let data = undefined;
-  let result = '';
+  export let data = undefined
+  let result = ''
 
   $: if (data) {
-    result = JSON.stringify(data, null, 2);
+    result = JSON.stringify(data, null, 2)
 
     setTimeout(() => {
-      data = undefined;
-      result = '';
-    }, 3000);
+      data = undefined
+      result = ''
+    }, 3000)
   }
 </script>
 

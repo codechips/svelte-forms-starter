@@ -1,21 +1,21 @@
 <script>
-  import Display from '@app/helpers/Display.svelte';
+  import Display from '@app/helpers/Display.svelte'
 
   const initial = {
     email: 'name@example.com',
     password: ''
-  };
+  }
 
-  let values = { ...initial };
+  let values = { ...initial }
 
-  let data = undefined;
+  let data = undefined
 
   const submit = () => {
-    console.log(values);
-    data = values;
-  };
+    console.log(values)
+    data = values
+  }
 
-  const reset = () => (values = { ...initial });
+  const reset = () => (values = { ...initial })
 </script>
 
 <div class="container mx-auto my-12 text-gray-700 space-y-4">
